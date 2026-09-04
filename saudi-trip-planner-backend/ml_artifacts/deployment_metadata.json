@@ -1,0 +1,42 @@
+{
+  "model_version": "20260831T182257Z",
+  "built_at_utc": "2026-08-31T18:50:16.895055+00:00",
+  "places_api_base": "https://placesproject.onrender.com",
+  "model_features": [
+    "city_key",
+    "sector_key",
+    "year",
+    "month_num",
+    "month_sin",
+    "month_cos",
+    "lag_1",
+    "lag_3",
+    "lag_12",
+    "rolling_3",
+    "rolling_6"
+  ],
+  "rank_weights": {
+    "preference_match": 0.4,
+    "place_quality": 0.15,
+    "regional_demand": 0.2,
+    "seasonality": 0.15,
+    "distance_fit": 0.1,
+    "budget_fit": 0.0,
+    "accessibility_fit": 0.0
+  },
+  "targets": {
+    "ndcg_at_5": 0.7,
+    "catalog_coverage": 0.7,
+    "intra_list_diversity": 0.5,
+    "itinerary_feasibility": 0.9,
+    "route_time_deviation": 0.15,
+    "mean_user_satisfaction": 4.0
+  },
+  "limitations": [
+    "KAPSARC/DataSaudi are macro context signals and are not venue-level popularity labels.",
+    "Venue price is not exposed by the current normalized Places API.",
+    "Confirmed venue accessibility is not exposed by the current normalized Places API.",
+    "Demand prediction endpoint supports one-month-ahead forecasting only.",
+    "Human-labeled NDCG, itinerary feasibility, route-time deviation, and user satisfaction require later evaluation phases."
+  ]
+}
